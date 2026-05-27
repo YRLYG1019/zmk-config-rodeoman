@@ -31,7 +31,7 @@ layers:
   - M
   - J
   - B
-  - {t: ▽, type: trans}
+  - '&kakko'
   - {t: ▽, type: trans}
   - '5'
   - {t: SPACE, h: '4'}
@@ -72,7 +72,7 @@ layers:
   - '{'
   - '}'
   - RIGHT SHIFT
-  - {t: ▽, type: trans}
+  - '&kakko'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -83,46 +83,46 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   '2':
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '%'
-  - ^
-  - '&'
-  - '*'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - (
   - )
-  - '`'
-  - '~'
-  - '"'
-  - ''''
+  - KP 7
+  - KP 8
+  - KP 9
+  - '*'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '-'
-  - _
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '{'
+  - '}'
+  - KP 4
+  - KP 5
+  - KP 6
+  - /
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - '['
   - ']'
-  - '|'
-  - \
-  - ':'
-  - ;
+  - KP 1
+  - KP 2
+  - KP 3
+  - +
+  - {t: '0', h: toggle}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '='
-  - +
-  - '{'
-  - '}'
+  - ENTER
+  - KP 0
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - .
+  - '-'
   '3':
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -247,9 +247,29 @@ layers:
   - {t: ▽, type: trans}
   - BT CLR ALL
 combos:
-- p: [0, 1]
-  k: ESC
-- p: [10, 11]
+- p: [17, 18]
+  k: ENTER
+- p: [16, 17]
+  k: BACKSPACE
+- p: [11, 12]
+  k: SPACE
+- p: [1, 2]
+  k: Sft+SPACE
+- p: [12, 13]
   k: TAB
+- p: [9, 8]
+  k: ESC
+- p: [15, 16]
+  k: HOME
+- p: [25, 26]
+  k: END
+- p: [26, 27]
+  k: PAGE UP
+- p: [27, 28]
+  k: PAGE DOWN
+- p: [6, 7]
+  k: INS
+- p: [0, 1]
+  k: CAPS
 - p: [30, 31]
-  k: '5'
+  k: {t: '2', h: toggle}
