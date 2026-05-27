@@ -35,22 +35,78 @@
     combos {
         compatible = "zmk,combos";
 
-        esc {
-            bindings = <&kp ESC>;
-            key-positions = <0 1>;
-            timeout-ms = <120>;
+        ent {
+            bindings = <&kp ENTER>;
+            key-positions = <17 18>;
+        };
+
+        bksp {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <16 17>;
+        };
+
+        space {
+            bindings = <&kp SPACE>;
+            key-positions = <11 12>;
+        };
+
+        shift+space {
+            bindings = <&kp LS(SPACE)>;
+            key-positions = <1 2>;
         };
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <10 11>;
-            timeout-ms = <120>;
+            key-positions = <12 13>;
         };
 
-        system_layer {
-            bindings = <&mo SYSTEM>;
+        esc {
+            bindings = <&kp ESC>;
+            key-positions = <9 8>;
+        };
+
+        home {
+            bindings = <&kp HOME>;
+            key-positions = <15 16>;
+        };
+
+        end {
+            bindings = <&kp END>;
+            key-positions = <25 26>;
+        };
+
+        PageUp {
+            bindings = <&kp PAGE_UP>;
+            key-positions = <26 27>;
+        };
+
+        PageDn {
+            bindings = <&kp PAGE_DOWN>;
+            key-positions = <27 28>;
+        };
+
+        ins {
+            bindings = <&kp INS>;
+            key-positions = <6 7>;
+        };
+
+        Cap {
+            bindings = <&kp CAPS>;
+            key-positions = <0 1>;
+        };
+
+        lay2 {
+            bindings = <&to 2>;
             key-positions = <30 31>;
-            timeout-ms = <120>;
+        };
+    };
+
+    macros {
+        kakko: kakko {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT>;
+            label = "KAKKO";
         };
     };
 
@@ -59,19 +115,19 @@
 
         DEFAULT {
             bindings = <
-&kp Q  &kp L  &kp U  &kp COMMA  &kp PERIOD  &kp F  &kp W  &kp R  &kp Y  &kp P  &kp E  &mt LEFT_ALT I  &mt LEFT_CONTROL A  &mt LEFT_SHIFT O  &mt LEFT_WIN MINUS  &mt RIGHT_WIN K  &mt RIGHT_SHIFT T  &mt RIGHT_CONTROL N  &mt RIGHT_ALT S  &kp H  &kp SLASH  &kp Z  &kp X  &kp C  &kp V  &kp G  &kp D  &kp M  &kp J  &kp B  &trans  &trans  &mo 5  &lt 4 SPACE  &kp TAB  &lt 1 ENTER  &kp BSPC  &trans  &trans  &trans
+&kp Q  &kp L  &kp U  &kp COMMA  &kp PERIOD  &kp F  &kp W  &kp R  &kp Y  &kp P  &kp E  &mt LEFT_ALT I  &mt LEFT_CONTROL A  &mt LEFT_SHIFT O  &mt LEFT_WIN MINUS  &mt RIGHT_WIN K  &mt RIGHT_SHIFT T  &mt RIGHT_CONTROL N  &mt RIGHT_ALT S  &kp H  &kp SLASH  &kp Z  &kp X  &kp C  &kp V  &kp G  &kp D  &kp M  &kp J  &kp B  &kakko  &trans  &mo 5  &lt 4 SPACE  &kp TAB  &lt 1 ENTER  &kp BSPC  &trans  &trans  &trans
             >;
         };
 
         LOWER {
             bindings = <
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp LEFT_CONTROL  &kp SLASH  &kp ASTERISK  &kp PERIOD  &kp EQUAL  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp RIGHT_CONTROL  &kp LEFT_SHIFT  &kp MINUS  &kp BACKSLASH  &kp SQT  &kp GRAVE  &kp DEL  &kp BACKSPACE  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp RIGHT_SHIFT  &trans  &trans  &trans  &trans  &kp LEFT_ALT  &trans  &trans  &trans  &trans  &trans
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp LEFT_CONTROL  &kp SLASH  &kp ASTERISK  &kp PERIOD  &kp EQUAL  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp RIGHT_CONTROL  &kp LEFT_SHIFT  &kp MINUS  &kp BACKSLASH  &kp SQT  &kp GRAVE  &kp DEL  &kp BACKSPACE  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp RIGHT_SHIFT  &kakko  &trans  &trans  &trans  &kp LEFT_ALT  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         RAISE {
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT  &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LPAR  &kp RPAR  &kp GRAVE  &kp TILDE  &kp DQT  &kp SQT  &trans  &trans  &kp MINUS  &kp UNDER  &kp LBKT  &kp RBKT  &kp PIPE  &kp BACKSLASH  &kp COLON  &kp SEMICOLON  &trans  &trans  &kp EQUAL  &kp PLUS  &kp LBRC  &kp RBRC  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp ASTERISK  &trans  &trans  &trans  &trans  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp SLASH  &trans  &trans  &trans  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PLUS  &to 0  &trans  &trans  &trans  &kp EQUAL  &kp ENTER  &kp KP_NUMBER_0  &trans  &kp DOT  &kp MINUS
             >;
         };
 
